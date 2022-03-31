@@ -22,7 +22,7 @@ Write-Host "================================================="
 
 $avsetStatus = Get-AzAvailabilitySet -ResourceGroupName $resourceGroupName -Name $avsetName -ErrorAction SilentlyContinue
 
-if ($avsetStatus -eq $null)
+if ($null -eq $avsetStatus)
 {
   Write-Host avset $avsetName not exists 
 
